@@ -1,0 +1,62 @@
+@font-face{
+    src: url(./assets/Broadway.ttf);
+    font-family: theme;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    
+}
+
+
+
+.header{
+    font-family:theme ;
+    color: yellow;
+    text-align: center;
+    padding: 15px;
+    margin-top: 5vh;
+    
+}
+
+.intro {
+    color: yellow;
+    padding: 15px;
+    margin-left: 15vw;
+    background-image: url("./assets/divbackground.jpeg");
+    background-size: cover;
+    height: 50px;
+    width: 100px;
+    border: yellow 2px solid;
+    border-radius: 6px;
+
+}
+
+
+
+
+.myButton {
+	box-shadow:inset 0px 1px 0px 0px #fbafe3;
+	background:linear-gradient(to bottom, #ff5bb0 5%, #ef027d 100%);
+	background-color:#ff5bb0;
+	border-radius:6px;
+	border:1px solid #ee1eb5;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #c70067;
+}
+.myButton:hover {
+	background:linear-gradient(to bottom, #ef027d 5%, #ff5bb0 100%);
+	background-color:#ef027d;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}

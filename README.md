@@ -12,7 +12,7 @@ This is based on RuPaul Drag Race contestant's names; the player tries to guess 
 3- Time!!!
 
 ### Additional Features:
-Setting up a second player to guess where the right letter will be placed at.
+Setting up a second player to guess where the right letter will be placed at and reset button.
 
 ### Timeline:
 07/01 : Gaining the approval and start setting up the HTML, CSS and JS layout. Pseudocode.
@@ -25,4 +25,4 @@ Setting up a second player to guess where the right letter will be placed at.
 
 07/05 : Finish up the CSS and all the other elements and submit the project hopefull by the end of the day. 
 
-![The Framewire](./framew.png)
+![The Framewire](./assets/framew.png)
