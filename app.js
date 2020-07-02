@@ -2,7 +2,8 @@
 
 /***************************************************************************
 - I need to start testing on one word then do the point below. 
-- I need an array for the words. probably 10 words.
+- I need an array for the words. probably 10 words. 
+- clues = [winner of season 11, winner of season 5, winner of season 6, vanji , bring back valentina, hows your head? miss fame, who can't cartwheel? Monique, who said: your tone seems very pointed right now? willam  , the wig reveal queen? Roxxy, winner of season 8 ]
  - defi will use a for loop.
  - Not sure if I'm gonna use .map, .push .join and .splice
  - I can have the word .length to represent the number of _ _ .
@@ -14,3 +15,103 @@
  - The attempts are: 1 for the mirror, 1 for the table, 1 for the lights. 4 for the table legs. 3 for the makeup.
  - don't forget to call your functions.
  *****************************************************************************/
+
+
+
+
+
+//  ************************ Canvas *************************
+let canvas, ctx;
+
+document.addEventListener('DOMContentLoaded', (ev) =>{
+    canvas = document.getElementById('canvas');
+    ctx = canvas.getContext('2d');
+    canvas.width = 300;
+    canvas.height = 280;
+    // Used js, instead of CSS, for the dimentions so the aspect ratio would stay intact
+    
+    drawMakeupTable();
+    drawMirror();
+    drawLeg1();
+    drawLeg2();
+    drawLeg3();
+    drawLeg4();
+    drawFoundation();
+    drawPowder();
+    drawBlender();
+    drawContour();
+});
+
+const drawMakeupTable = function (){
+    ctx.rect(50, 120, 200, 70);
+    ctx.fillStyle = 'black';
+    ctx.fill();
+   
+
+};
+
+const drawMirror = function (){
+    ctx.beginPath();
+    ctx.rect(60, 20, 180, 100);
+    ctx.fillStyle = 'grey';
+    ctx.fill();
+};
+
+const drawLeg1 = function (){
+    ctx.beginPath();
+    ctx.rect(60, 190, 10, 70);
+    ctx.fillStyle = 'black';
+    ctx.fill();
+};
+
+const drawLeg2 = function (){
+    ctx.beginPath();
+    ctx.rect(90, 190, 10, 60);
+    ctx.fillStyle = 'black';
+    ctx.fill();
+};
+
+const drawLeg3 = function (){
+    ctx.beginPath();
+    ctx.rect(200, 190, 10, 60);
+    ctx.fillStyle = 'black';
+    ctx.fill();
+};
+
+const drawLeg4 = function (){
+    ctx.beginPath();
+    ctx.rect(230, 190, 10, 70);
+    ctx.fillStyle = 'black';
+    ctx.fill();
+};
+
+const drawFoundation = function (){
+    ctx.beginPath();
+    ctx.rect(210, 130, 10, 50);
+    ctx.fillStyle = '#F29C6B';
+    ctx.fill();
+}
+
+const drawPowder = function (){
+    ctx.beginPath();
+    ctx.arc(120, 155, 15, 0, (Math.PI*2), false);
+    ctx.fillStyle = 'beige';
+    ctx.fill();
+}
+
+const drawBlender = function (){
+    ctx.beginPath();
+    ctx.ellipse(175, 155, 15, 10 ,180 , 0 , (Math.PI*2), false);
+    ctx.fillStyle = '#F22E8A';
+    ctx.fill();
+}
+
+const drawContour = function (){
+    ctx.beginPath();
+    ctx.rect(70, 145, 20, 20);
+    ctx.fillStyle = '#BF613F';
+    ctx.fill();
+}
+
+
+// ********************** End of Canvas *****************************
