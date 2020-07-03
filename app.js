@@ -57,6 +57,7 @@ let bank = [q1 , q2 , q3 , q4 , q5 , q6 , q7 , q8 , q9 , q10];
 
 // ******************************* End of Actors ***************************************************
 
+// ******************************* The Action ***************************************************
 
 // ~~~~~~~~~~~~~~~~~~~~ Action 1 (randomization)  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -67,7 +68,7 @@ let bacon = bank[randomPlay].answer;
 let bakedBeans = bank[randomPlay].clue
 // I  ran out of creativity with the name choices but remove the bacon & baked beans before submitting
 
-console.log(bacon , bakedBeans);
+console.log(bakedBeans , bacon);
 
 // ~~~~~~~~~~~~~~~~~~~~ Action 2 (Splitting)  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -91,7 +92,8 @@ displayDashes.textContent = letters;
 // The commas are there because I used .split . which is fine. 
 
 // ~~~~~~~~~~~~~~~~~~~~ Action 5 (Keyboard)  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-// from stackoverflow.
+
+// from stackoverflow slightly modified.
 window.addEventListener( "load", function( windowLoadE ) {
     var p, letter, button, holder;
     holder = document.getElementById( "buttonsHolder" );
@@ -110,12 +112,32 @@ window.addEventListener( "load", function( windowLoadE ) {
         }
     }
 } );
+
+
+
 function setLetter( letter ) {
     var div = document.getElementById( "guess" );
     div.innerHTML = div.innerHTML + letter;
+    console.log(letter);
 }
 
 // ~~~~~~~~~~~~~~~~~~~~ Action 6 (Checking the input from the keyboard)  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+let playerGuess = document.getElementById('guess');
+
+playerGuess.addEventListener(input , checkResult);
+
+function checkResult(ev) {
+    ev.preventDefault();
+    if (ev == letters){
+        console.log(input);
+    }else {
+        alert("wrong");
+    }
+};
+
+
+
 /*
 //  ************************ Canvas *************************
 let canvas, ctx;
