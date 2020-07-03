@@ -83,7 +83,12 @@ displayClue.textContent = bakedBeans;
 // ~~~~~~~~~~~~~~~~~~~~ Action 4 (Inserting the answers into the HTML)  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 let displayDashes = document.querySelector('.guess');
-displayDashes.textContent = bacon.length;
+
+for (let x = 0 ; x < letters.length ; x++){
+    letters[x] = " _ ";
+}
+displayDashes.textContent = letters;
+// The commas are there because I used .split . which is fine. 
 
 
 /*
