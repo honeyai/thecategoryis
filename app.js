@@ -90,7 +90,32 @@ for (let x = 0 ; x < letters.length ; x++){
 displayDashes.textContent = letters;
 // The commas are there because I used .split . which is fine. 
 
+// ~~~~~~~~~~~~~~~~~~~~ Action 5 (Keyboard)  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// from stackoverflow.
+window.addEventListener( "load", function( windowLoadE ) {
+    var p, letter, button, holder;
+    holder = document.getElementById( "buttonsHolder" );
+    for ( var i = 65; i <= 90; i++ ) {
+        if ( i == 65 || i == 75 || i == 84 ) {
+            p = document.createElement( "p" );
+        }
+        letter = String.fromCharCode( i );
+        button = document.createElement( "button" );
+        button.innerHTML = letter;
+        button.setAttribute( "data-letter", letter );
+        button.onclick = function( e ) { setLetter( this.getAttribute( "data-letter" ) ); };
+        p.appendChild( button );
+        if ( i == 74 || i == 83 || i == 90 ) {
+            holder.appendChild( p );
+        }
+    }
+} );
+function setLetter( letter ) {
+    var div = document.getElementById( "guess" );
+    div.innerHTML = div.innerHTML + letter;
+}
 
+// ~~~~~~~~~~~~~~~~~~~~ Action 6 (Checking the input from the keyboard)  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 /*
 //  ************************ Canvas *************************
 let canvas, ctx;
@@ -192,28 +217,4 @@ const drawContour = function (){
 
 
 // ********************** End of Canvas *****************************
-
-// from stackoverflow . Not sure what I'm gonna do with it!!
-window.addEventListener( "load", function( windowLoadE ) {
-    var p, letter, button, holder;
-    holder = document.getElementById( "buttonsHolder" );
-    for ( var i = 65; i <= 90; i++ ) {
-        if ( i == 65 || i == 75 || i == 84 ) {
-            p = document.createElement( "p" );
-        }
-        letter = String.fromCharCode( i );
-        button = document.createElement( "button" );
-        button.innerHTML = letter;
-        button.setAttribute( "data-letter", letter );
-        button.onclick = function( e ) { setLetter( this.getAttribute( "data-letter" ) ); };
-        p.appendChild( button );
-        if ( i == 74 || i == 83 || i == 90 ) {
-            holder.appendChild( p );
-        }
-    }
-} );
-function setLetter( letter ) {
-    var div = document.getElementById( "name" );
-    div.innerHTML = div.innerHTML + letter;
-}
 */
