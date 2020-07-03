@@ -16,6 +16,8 @@
  - don't forget to call your functions.
  - Idea for the action: do a while loop and inside it a nested if loop where you compare the play's input to the answer. I can use .slice , .splice or .map to separate them. I will use .join to stick them together for the result. 
  - consider using add event listener and inner HTML. 
+ - I can compare the input using .filter.
+ - I will need .length for the number of dashes.
  *****************************************************************************/
 
 
@@ -55,10 +57,23 @@ let bank = [q1 , q2 , q3 , q4 , q5 , q6 , q7 , q8 , q9 , q10];
 // ******************************* End of Actors ***************************************************
 
 
+// ~~~~~~~~~~~~~~~~~~~~ Action 1 (randomization)  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+let max = bank.length-1;
+let min = 0;
+let randomPlay = Math.floor(Math.random() * (max-min + 1));
+let bacon = bank[randomPlay];
+// if I want any property add .property after the sub.
+// I know you ran out of creativity with the name choice but remove the bacon before submitting
+
+console.log(bacon);
+
+// ~~~~~~~~~~~~~~~~~~~~ Action 2 (splitting)  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 
 
+/*
 //  ************************ Canvas *************************
 let canvas, ctx;
 
@@ -183,3 +198,4 @@ function setLetter( letter ) {
     var div = document.getElementById( "name" );
     div.innerHTML = div.innerHTML + letter;
 }
+*/
