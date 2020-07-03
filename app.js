@@ -62,14 +62,18 @@ let bank = [q1 , q2 , q3 , q4 , q5 , q6 , q7 , q8 , q9 , q10];
 let max = bank.length-1;
 let min = 0;
 let randomPlay = Math.floor(Math.random() * (max-min + 1));
-let bacon = bank[randomPlay];
-// if I want any property add .property after the sub.
+let bacon = bank[randomPlay].answer;
 // I know you ran out of creativity with the name choice but remove the bacon before submitting
 
-console.log(bacon);
+// console.log(bacon);
 
 // ~~~~~~~~~~~~~~~~~~~~ Action 2 (splitting)  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+let letters = bacon.split("");
+// console.log(letters);
+
+
+// ~~~~~~~~~~~~~~~~~~~~ Action 3 (checking if the letters are coorect)  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 
