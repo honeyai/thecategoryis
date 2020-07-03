@@ -3,7 +3,7 @@
 /***************************************************************************
 - I need to start testing on one word then do the point below. 
 - I need an array for the words. probably 10 words. 
-- clues = [winner of season 11, winner of season 5, winner of season 6, vanji , bring back valentina, hows your head? miss fame, who can't cartwheel? Monique, who said: your tone seems very pointed right now? willam  , the wig reveal queen? Roxxy, winner of season 8 ]
+- clues = [winner of season 10, winner of season 5, winner of season 6, vanji , bring back valentina, hows your head? miss fame, who can't cartwheel? Monique, who said: your tone seems very pointed right now? willam  , the wig reveal queen? Roxxy, winner of season 8 ]
  - defi will use a for loop.
  - Not sure if I'm gonna use .map, .push .join and .splice
  - I can have the word .length to represent the number of _ _ .
@@ -17,7 +17,7 @@
  *****************************************************************************/
 
 
-
+let words = ["Aquaria" , "Bianca" , "Jinkx" , " Vanji" , "Valentina" , "Fame" , "Monique" , "Willam" , "Roxxy" , "Bob"]
 
 
 //  ************************ Canvas *************************
@@ -51,10 +51,15 @@ const drawMakeupTable = function (){
 };
 
 const drawMirror = function (){
-    ctx.beginPath();
-    ctx.rect(60, 20, 180, 100);
-    ctx.fillStyle = 'grey';
-    ctx.fill();
+ctx.beginPath();
+// Create color gradient
+let grd = ctx.createRadialGradient(75, 50, 5, 90, 60, 100);
+grd.addColorStop(0, "white");
+grd.addColorStop(1, "grey");
+
+// Fill with the color gradient
+ctx.fillStyle = grd;
+ctx.fillRect(60, 20, 180, 100);
 };
 
 const drawLeg1 = function (){
@@ -90,28 +95,52 @@ const drawFoundation = function (){
     ctx.rect(210, 130, 10, 50);
     ctx.fillStyle = '#F29C6B';
     ctx.fill();
-}
+};
 
 const drawPowder = function (){
     ctx.beginPath();
     ctx.arc(120, 155, 15, 0, (Math.PI*2), false);
     ctx.fillStyle = 'beige';
     ctx.fill();
-}
+};
 
 const drawBlender = function (){
     ctx.beginPath();
     ctx.ellipse(175, 155, 15, 10 ,180 , 0 , (Math.PI*2), false);
     ctx.fillStyle = '#F22E8A';
     ctx.fill();
-}
+};
 
 const drawContour = function (){
     ctx.beginPath();
     ctx.rect(70, 145, 20, 20);
     ctx.fillStyle = '#BF613F';
     ctx.fill();
-}
+};
 
 
 // ********************** End of Canvas *****************************
+
+// from stackoverflow
+window.addEventListener( "load", function( windowLoadE ) {
+    var p, letter, button, holder;
+    holder = document.getElementById( "buttonsHolder" );
+    for ( var i = 65; i <= 90; i++ ) {
+        if ( i == 65 || i == 75 || i == 84 ) {
+            p = document.createElement( "p" );
+        }
+        letter = String.fromCharCode( i );
+        button = document.createElement( "button" );
+        button.innerHTML = letter;
+        button.setAttribute( "data-letter", letter );
+        button.onclick = function( e ) { setLetter( this.getAttribute( "data-letter" ) ); };
+        p.appendChild( button );
+        if ( i == 74 || i == 83 || i == 90 ) {
+            holder.appendChild( p );
+        }
+    }
+} );
+function setLetter( letter ) {
+    var div = document.getElementById( "name" );
+    div.innerHTML = div.innerHTML + letter;
+}

@@ -17,12 +17,35 @@
 }
 
 .left-column{
-    background-color: wheat;
-    opacity: 0.7;
-    width: 200px;
-    height: 500px;
-    position: relative;
-    border: springgreen 5px solid;
+	background-color: rgba(244, 244, 244, 0.3);;
+	margin-top: 5px;
+    width: 250px;
+	height: 280px;
+	padding: 10px;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-content: space-between;
+	justify-content: center;
+}
+
+.question{
+	background-color: violet;
+	padding: 15px;
+	position: relative;
+	height: 60%;
+	width: 80%;
+	align-self: center;
+	text-align: center;
+}
+
+.guess{
+	background-color: teal;
+	position: relative;
+	height: 30%;
+	width: 80%;
+	padding: 15px;
+	text-align: center;
 }
 
 .right-column{
@@ -41,10 +64,11 @@
 
 
 #canvas {
-	border: 5px solid yellow;
+	/* border: 5px solid yellow; */
 	margin: 1 rem auto;
 	display: block;
-	background-color: whitesmoke;
+	background-color: rgba(244, 244, 244, 0.7); 
+	
 	position: relative;
 }
 
