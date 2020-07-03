@@ -18,6 +18,7 @@
  - consider using add event listener and inner HTML. 
  - I can compare the input using .filter.
  - I will need .length for the number of dashes.
+ - why do I use an input with add event listener!!!
  *****************************************************************************/
 
 
@@ -63,18 +64,26 @@ let max = bank.length-1;
 let min = 0;
 let randomPlay = Math.floor(Math.random() * (max-min + 1));
 let bacon = bank[randomPlay].answer;
-// I know you ran out of creativity with the name choice but remove the bacon before submitting
+let bakedBeans = bank[randomPlay].clue
+// I  ran out of creativity with the name choices but remove the bacon & baked beans before submitting
 
-// console.log(bacon);
+console.log(bacon , bakedBeans);
 
-// ~~~~~~~~~~~~~~~~~~~~ Action 2 (splitting)  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// ~~~~~~~~~~~~~~~~~~~~ Action 2 (Splitting)  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 let letters = bacon.split("");
 // console.log(letters);
 
 
-// ~~~~~~~~~~~~~~~~~~~~ Action 3 (checking if the letters are coorect)  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// ~~~~~~~~~~~~~~~~~~~~ Action 3 (Inserting the clues into the HTML)  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+let displayClue = document.querySelector('.question');
+displayClue.textContent = bakedBeans;
+
+// ~~~~~~~~~~~~~~~~~~~~ Action 4 (Inserting the answers into the HTML)  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+let displayDashes = document.querySelector('.guess');
+displayDashes.textContent = bacon.length;
 
 
 /*
