@@ -14,6 +14,8 @@
  - There's an option where I draw the makeup table and cover it with a clear object and with every wrong answer the clear object disappears.
  - The attempts are: 1 for the mirror, 1 for the table, 1 for the lights. 4 for the table legs. 3 for the makeup.
  - don't forget to call your functions.
+ - Idea for the action: do a while loop and inside it a nested if loop where you compare the play's input to the answer. I can use .slice , .splice or .map to separate them. I will use .join to stick them together for the result. 
+ - consider using add event listener and inner HTML. 
  *****************************************************************************/
 
 
