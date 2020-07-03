@@ -2,7 +2,7 @@
 
 /***************************************************************************
 - I need to start testing on one word then do the point below. 
-- I need an array for the words. probably 10 words. 
+- I need an array for the words. probably 10 words. // let words = ["Aquaria" , "Bianca" , "Jinkx" , " Vanji" , "Valentina" , "Fame" , "Monique" , "Willam" , "Roxxy" , "Bob"]
 - clues = [winner of season 10, winner of season 5, winner of season 6, vanji , bring back valentina, hows your head? miss fame, who can't cartwheel? Monique, who said: your tone seems very pointed right now? willam  , the wig reveal queen? Roxxy, winner of season 8 ]
  - defi will use a for loop.
  - Not sure if I'm gonna use .map, .push .join and .splice
@@ -17,7 +17,44 @@
  *****************************************************************************/
 
 
-let words = ["Aquaria" , "Bianca" , "Jinkx" , " Vanji" , "Valentina" , "Fame" , "Monique" , "Willam" , "Roxxy" , "Bob"]
+
+// ********************************* The Actors ****************************************************
+//  Going to create a class with clues and answers as properties and keys and put them in an array. 
+class cluesAndanswers {
+    constructor (clue , answer){
+        this.clue = clue;
+        this.answer = answer;
+
+    };
+};
+
+// didn't forget to instansiate here :)
+let q1 = new cluesAndanswers("The winner of season 11" , "aquaria");
+let q2 = new cluesAndanswers("The winner of season 6" , "bianca");
+let q3 = new cluesAndanswers("The winner of season 5" , "jinkx");
+let q4 = new cluesAndanswers('The winner of season 8' , "bob");
+let q5 = new cluesAndanswers("Something Vanji started" , "vanji");
+let q6 = new cluesAndanswers("Bring back ... " , "valentina");
+let q7 = new cluesAndanswers("Hows your head miss..." , 'fame');
+let q8 = new cluesAndanswers("Can't do a cartwheel" , "monique");
+let q9 = new cluesAndanswers("The wig reveal queen..." , 'roxxy');
+let q10 = new cluesAndanswers("Your tone seems very pointed right now" , "willam")
+
+
+// slap them into an array
+let bank = [q1 , q2 , q3 , q4 , q5 , q6 , q7 , q8 , q9 , q10];
+
+
+// Its working so far :)
+// console.log(bank);
+// console.log(bank[4]);
+// console.log(bank[4]. clue);
+
+// ******************************* End of Actors ***************************************************
+
+
+
+
 
 
 //  ************************ Canvas *************************
@@ -121,7 +158,7 @@ const drawContour = function (){
 
 // ********************** End of Canvas *****************************
 
-// from stackoverflow
+// from stackoverflow . Not sure what I'm gonna do with it!!
 window.addEventListener( "load", function( windowLoadE ) {
     var p, letter, button, holder;
     holder = document.getElementById( "buttonsHolder" );
