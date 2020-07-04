@@ -95,9 +95,9 @@ displayDashes.textContent = letters;
 // console.log(letters);
 // The commas are there because I used .split . which is fine. 
 
-// ~~~~~~~~~~~~~~~~~~~~ Action 5 (Keyboard)  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// ~~~~~~~~~~~~~~~~~~~~ Action 5 (Keyboard & input action)  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-// from stackoverflow slightly modified. https://stackoverflow.com/questions/30616925/creating-26-alphabet-letter-buttons-with-the-for-loop-and-string-fromcharcode
+// From stackoverflow, but modified by me. https://stackoverflow.com/questions/30616925/creating-26-alphabet-letter-buttons-with-the-for-loop-and-string-fromcharcode
 window.addEventListener( "load", function( windowLoadE ) {
     var p, letter, button, holder;
     holder = document.getElementById( "buttonsHolder" );
@@ -119,45 +119,29 @@ window.addEventListener( "load", function( windowLoadE ) {
 
 let brisket ;
 
+function dashRemover () {
+    letters.pop();
+    document.getElementById("guess").innerHTML = letters
+}
 
 function setLetter( letter ) {
     var div = document.getElementById( "guess" );
-    div.innerHTML = div.innerHTML + letter;
+    // div.innerHTML = div.innerHTML + letter;
     brisket = characters.includes(letter)
     if (brisket == true){
-        console.log("great")
+        dashRemover();
+        div.innerHTML = div.innerHTML + letter;
     } else {
         alert("wrong")
+        
     }
     console.log(brisket);
-    // console.log(letter);
+    console.log(letter);
 }
 
-// ~~~~~~~~~~~~~~~~~~~~ Action 6 (Checking the input from the keyboard)  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 
-
-// console.log(playerGuess)
-
-
-
-// let playerGuess = document.querySelector('.guess');
-
-// playerGuess.addEventListener(input , checkResult);
-
-// function checkResult(ev) {
-//     ev.preventDefault();
-//     if (ev == letters){
-//         console.log(input);
-//     }else {
-//         alert("wrong");
-//     }
-// };
-
-
-
-/*
 //  ************************ Canvas *************************
 let canvas, ctx;
 
@@ -258,4 +242,4 @@ const drawContour = function (){
 
 
 // ********************** End of Canvas *****************************
-*/
+
