@@ -19,6 +19,7 @@
  - I can compare the input using .filter.
  - I will need .length for the number of dashes.
  - why do I use an input with add event listener!!!
+ - use .replace to turn the dashes into letters.
  *****************************************************************************/
 
 
@@ -34,16 +35,16 @@ class cluesAndanswers {
 };
 
 // didn't forget to instansiate here :)
-let q1 = new cluesAndanswers("The winner of season 11" , "aquaria");
-let q2 = new cluesAndanswers("The winner of season 6" , "bianca");
-let q3 = new cluesAndanswers("The winner of season 5" , "jinkx");
-let q4 = new cluesAndanswers('The winner of season 8' , "bob");
-let q5 = new cluesAndanswers("Something Vanji started" , "vanji");
-let q6 = new cluesAndanswers("Bring back ... " , "valentina");
-let q7 = new cluesAndanswers("Hows your head miss..." , 'fame');
-let q8 = new cluesAndanswers("Can't do a cartwheel" , "monique");
-let q9 = new cluesAndanswers("The wig reveal queen..." , 'roxxy');
-let q10 = new cluesAndanswers("Your tone seems very pointed right now" , "willam")
+let q1 = new cluesAndanswers("The winner of season 11" , "AQUARIA");
+let q2 = new cluesAndanswers("The winner of season 6" , "BIANCA");
+let q3 = new cluesAndanswers("The winner of season 5" , "JINKX");
+let q4 = new cluesAndanswers('The winner of season 8' , "BOB");
+let q5 = new cluesAndanswers("Something Vanji started" , "VANJI");
+let q6 = new cluesAndanswers("Bring back ... " , "VALENTINA");
+let q7 = new cluesAndanswers("Hows your head miss..." , 'FAME');
+let q8 = new cluesAndanswers("Can't do a cartwheel" , "MONIQUE");
+let q9 = new cluesAndanswers("The wig reveal queen..." , 'ROXXY');
+let q10 = new cluesAndanswers("Your tone seems very pointed right now" , "WILLAM")
 
 
 // slap them into an array
@@ -72,8 +73,10 @@ console.log(bakedBeans , bacon);
 
 // ~~~~~~~~~~~~~~~~~~~~ Action 2 (Splitting)  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+let characters = bacon.split("");
 let letters = bacon.split("");
 // console.log(letters);
+console.log(characters)
 
 
 // ~~~~~~~~~~~~~~~~~~~~ Action 3 (Inserting the clues into the HTML)  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -89,11 +92,12 @@ for (let x = 0 ; x < letters.length ; x++){
     letters[x] = " _ ";
 }
 displayDashes.textContent = letters;
+// console.log(letters);
 // The commas are there because I used .split . which is fine. 
 
 // ~~~~~~~~~~~~~~~~~~~~ Action 5 (Keyboard)  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-// from stackoverflow slightly modified.
+// from stackoverflow slightly modified. https://stackoverflow.com/questions/30616925/creating-26-alphabet-letter-buttons-with-the-for-loop-and-string-fromcharcode
 window.addEventListener( "load", function( windowLoadE ) {
     var p, letter, button, holder;
     holder = document.getElementById( "buttonsHolder" );
@@ -113,28 +117,43 @@ window.addEventListener( "load", function( windowLoadE ) {
     }
 } );
 
+let brisket ;
 
 
 function setLetter( letter ) {
     var div = document.getElementById( "guess" );
     div.innerHTML = div.innerHTML + letter;
-    console.log(letter);
+    brisket = characters.includes(letter)
+    if (brisket == true){
+        console.log("great")
+    } else {
+        alert("wrong")
+    }
+    console.log(brisket);
+    // console.log(letter);
 }
 
 // ~~~~~~~~~~~~~~~~~~~~ Action 6 (Checking the input from the keyboard)  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-let playerGuess = document.getElementById('guess');
 
-playerGuess.addEventListener(input , checkResult);
 
-function checkResult(ev) {
-    ev.preventDefault();
-    if (ev == letters){
-        console.log(input);
-    }else {
-        alert("wrong");
-    }
-};
+
+// console.log(playerGuess)
+
+
+
+// let playerGuess = document.querySelector('.guess');
+
+// playerGuess.addEventListener(input , checkResult);
+
+// function checkResult(ev) {
+//     ev.preventDefault();
+//     if (ev == letters){
+//         console.log(input);
+//     }else {
+//         alert("wrong");
+//     }
+// };
 
 
 
