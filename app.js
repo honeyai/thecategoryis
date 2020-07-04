@@ -50,7 +50,7 @@ let q10 = new cluesAndanswers("Your tone seems very pointed right now" , "WILLAM
 // slap them into an array
 let bank = [q1 , q2 , q3 , q4 , q5 , q6 , q7 , q8 , q9 , q10];
 
-
+let attempts = 10 ;
 // Its working so far :)
 // console.log(bank);
 // console.log(bank[4]);
@@ -117,13 +117,16 @@ window.addEventListener( "load", function( windowLoadE ) {
     }
 } );
 
+//  ************************ The Game *************************
+
 let brisket ;
+let filling
 
 function dashRemover () {
-    letters.pop();
+    letters.shift();
     document.getElementById("guess").innerHTML = letters
 }
-
+// I could use splice here ^
 function setLetter( letter ) {
     var div = document.getElementById( "guess" );
     // div.innerHTML = div.innerHTML + letter;
@@ -131,15 +134,19 @@ function setLetter( letter ) {
     if (brisket == true){
         dashRemover();
         div.innerHTML = div.innerHTML + letter;
-    } else {
-        alert("wrong")
         
-    }
-    console.log(brisket);
-    console.log(letter);
+        
+        letters.push(letter);
+    } else {
+        // alert("wrong")
+      attempts--
+      console.log(attempts)  
+    };
+    // console.log(brisket);
+    // console.log(letter);
 }
 
-
+//  ************************ End of Game *************************
 
 
 //  ************************ Canvas *************************
