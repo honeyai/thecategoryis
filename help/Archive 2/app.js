@@ -120,7 +120,7 @@ window.addEventListener( "load", function( windowLoadE ) {
 //  ************************ The Game *************************
 
 let brisket ;
-let filling;
+let filling
 
 function dashRemover () {
     letters.shift();
@@ -141,12 +141,11 @@ function setLetter( letter ) {
         // alert("wrong")
       attempts--
       console.log(attempts) 
-        console.log(parts.length)
+
     };
     // console.log(brisket);
     // console.log(letter);
 }
-
 
 
 //  ************************ End of Game *************************
@@ -156,7 +155,7 @@ function setLetter( letter ) {
 //  ************************ Canvas *************************
 let canvas, ctx;
 
-let parts
+
 
 document.addEventListener('DOMContentLoaded', (ev) =>{
     canvas = document.getElementById('canvas');
@@ -165,7 +164,7 @@ document.addEventListener('DOMContentLoaded', (ev) =>{
     canvas.height = 280;
     // Used js, instead of CSS, for the dimentions so the aspect ratio would stay intact
     
-     parts =[drawMakeupTable() ,
+    drawMakeupTable() ,
      drawMirror() ,
       drawLeg1() ,
        drawLeg2() ,
@@ -174,7 +173,7 @@ document.addEventListener('DOMContentLoaded', (ev) =>{
           drawFoundation() ,
            drawPowder() ,
             drawBlender() ,
-             drawContour()];
+             drawContour();
     
 });
 
