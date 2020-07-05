@@ -27,13 +27,15 @@
     background-image: url("./assets/divbackground.jpeg");
     background-size: cover;
     height: 50px;
-    width: 100px;
-    border: yellow 2px solid;
-    border-radius: 6px;
-
+    margin-top: 350px;
 }
 
-
+.start-button{
+    float: right;
+    margin-right: 25px;
+    padding-right: 10px;
+    margin-bottom: 10px;
+}
 
 
 .myButton {
