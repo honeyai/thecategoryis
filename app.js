@@ -141,7 +141,39 @@ function setLetter( letter ) {
         // alert("wrong")
       attempts--
       console.log(attempts) 
-        console.log(parts.length)
+        switch (attempts){
+            case 9:
+                drawLeg1();
+                break;
+            case 8:
+                drawLeg2();
+                break;
+            case 7:
+                drawLeg3();
+                break;
+            case 6:
+                drawLeg4();
+                break;
+            case 5:
+                drawMakeupTable();
+                break;
+            case 4:
+                drawMirror();
+                break;
+            case 3:
+                drawFoundation();
+                break;
+            case 2:
+                drawPowder();
+                break;
+            case 1:
+                drawBlender();
+                break;
+            case 0:
+                drawContour()
+                alert("Game Over");
+                break;
+        }
     };
     // console.log(brisket);
     // console.log(letter);
@@ -165,16 +197,7 @@ document.addEventListener('DOMContentLoaded', (ev) =>{
     canvas.height = 280;
     // Used js, instead of CSS, for the dimentions so the aspect ratio would stay intact
     
-     parts =[drawMakeupTable() ,
-     drawMirror() ,
-      drawLeg1() ,
-       drawLeg2() ,
-        drawLeg3() ,
-         drawLeg4() ,
-          drawFoundation() ,
-           drawPowder() ,
-            drawBlender() ,
-             drawContour()];
+    
     
 });
 

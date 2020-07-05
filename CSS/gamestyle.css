@@ -27,6 +27,7 @@
 	flex-direction: column;
 	align-content: space-between;
 	justify-content: center;
+	font-family: 'Rajdhani', sans-serif;
 }
 
 .question{
@@ -37,6 +38,8 @@
 	width: 80%;
 	align-self: center;
 	text-align: center;
+	font-family: 'Rajdhani', sans-serif;
+	
 }
 
 .guess{
