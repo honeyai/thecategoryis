@@ -126,6 +126,8 @@ function dashRemover () {
     letters.shift();
     document.getElementById("guess").innerHTML = letters
 }
+
+
 // I could use splice here ^
 function setLetter( letter ) {
     var div = document.getElementById( "guess" );
@@ -171,14 +173,13 @@ function setLetter( letter ) {
                 break;
             case 0:
                 drawContour()
-                alert("Game Over");
+                alert("Game Over") 
                 break;
         }
     };
     // console.log(brisket);
     // console.log(letter);
 }
-
 
 
 
