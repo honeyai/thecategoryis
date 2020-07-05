@@ -41,7 +41,7 @@ let q3 = new cluesAndanswers("The winner of season 5" , "JINKX");
 let q4 = new cluesAndanswers('The winner of season 8' , "BOB");
 let q5 = new cluesAndanswers("Something Vanji started" , "VANJI");
 let q6 = new cluesAndanswers("Bring back ... " , "VALENTINA");
-let q7 = new cluesAndanswers("Hows your head miss..." , 'FAME');
+let q7 = new cluesAndanswers("How's your head miss..." , 'FAME');
 let q8 = new cluesAndanswers("Can't do a cartwheel" , "MONIQUE");
 let q9 = new cluesAndanswers("The wig reveal queen..." , 'ROXXY');
 let q10 = new cluesAndanswers("Your tone seems very pointed right now" , "WILLAM")
@@ -120,7 +120,7 @@ window.addEventListener( "load", function( windowLoadE ) {
 //  ************************ The Game *************************
 
 let brisket ;
-let filling;
+
 
 function dashRemover () {
     letters.shift();
@@ -181,14 +181,15 @@ function setLetter( letter ) {
 
 
 
+
 //  ************************ End of Game *************************
 
 
 
 //  ************************ Canvas *************************
+
 let canvas, ctx;
 
-let parts
 
 document.addEventListener('DOMContentLoaded', (ev) =>{
     canvas = document.getElementById('canvas');
@@ -196,9 +197,6 @@ document.addEventListener('DOMContentLoaded', (ev) =>{
     canvas.width = 300;
     canvas.height = 280;
     // Used js, instead of CSS, for the dimentions so the aspect ratio would stay intact
-    
-    
-    
 });
 
 
