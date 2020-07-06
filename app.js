@@ -67,7 +67,7 @@ let min = 0;
 let randomPlay = Math.floor(Math.random() * (max-min + 1));
 let bacon = bank[randomPlay].answer;
 let bakedBeans = bank[randomPlay].clue
-// I  ran out of creativity with the name choices but remove the bacon & baked beans before submitting
+// I  ran out of creativity with the name choices but remove the bacon , baked beans and other grocery list items before submitting
 
 console.log(bakedBeans , bacon);
 
@@ -126,9 +126,9 @@ function dashRemover () {
     letters.shift();
     document.getElementById("guess").innerHTML = letters
 }
-
-
 // I could use splice here ^
+
+
 function setLetter( letter ) {
     var div = document.getElementById( "guess" );
     // div.innerHTML = div.innerHTML + letter;
@@ -173,7 +173,7 @@ function setLetter( letter ) {
                 break;
             case 0:
                 drawContour()
-                alert("Game Over") 
+                alert("Game Over. Refresh the page to play again") 
                 break;
         }
     };
